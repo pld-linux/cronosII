@@ -7,6 +7,7 @@ License:	GPL
 Group:		Applications/Mail
 Source0:	ftp://ftp.sourceforge.net/pub/sourceforge/cronosii/%{name}-%{version}.tar.bz2
 Patch0:		%{name}-DESTDIR.patch
+Patch1:		%{name}-includes.patch
 URL:		http://cronosII.sourceforge.net/
 BuildRequires:	autoconf
 BuildRequires:	automake
@@ -36,7 +37,8 @@ jej czytania.
 
 %prep
 %setup -q
-#%patch0 -p1
+%patch0 -p1
+%patch1
 
 rm -f acinclude.m4 missing
 
@@ -58,8 +60,6 @@ rm -rf $RPM_BUILD_ROOT
 	desktopdir=%{_applnkdir}/Network/Mail \
 	Internetdir=%{_applnkdir}/Network/Mail
 
-gzip -9nf TODO README NEWS FEATURES AUTHORS ChangeLog
-
 %find_lang %{name} --with-gnome
 
 %clean
@@ -67,7 +67,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files -f %{name}.lang
 %defattr(644,root,root,755)
-%doc *.gz
+%doc TODO README NEWS FEATURES AUTHORS ChangeLog
 %attr(755,root,root) %{_bindir}/*
 %{_datadir}/%{name}
 %{_applnkdir}/*/*/*.desktop
