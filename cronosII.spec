@@ -1,7 +1,7 @@
 Summary:	The GNOME Email Client
 Summary(pl):	Klient poczty dla GNOME
 Name:		cronosII
-Version:	0.2.0
+Version:	0.2.1
 Release:	1
 License:	GPL
 Group:		Applications/Mail
