@@ -62,5 +62,5 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_bindir}/*
 %{_datadir}/%{name}
 %{_applnkdir}/*/*/*.desktop
-%{_datadir}/pixmaps/*
+%{_pixmapsdir}/*
 %{_mandir}/man*/*
