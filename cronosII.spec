@@ -9,8 +9,10 @@ Group(de):	Applikationen/Post
 Group(pl):	Aplikacje/Poczta
 Group(pt):	Aplicações/Correio Eletrônico
 Source0:	ftp://cronosii.sourceforge.net/pub/cronosii/%{name}-%{version}.tar.bz2
+Patch0:		%{name}-DESTDIR.patch
 URL:		http://cronosII.sourceforge.net/
 BuildRequires:	autoconf
+BuildRequires:	automake
 BuildRequires:	gettext-devel
 BuildRequires:	glib-devel
 BuildRequires:	gnome-libs-devel
@@ -35,10 +37,13 @@ jej czytania.
 
 %prep
 %setup -q
+%patch0 -p1
 
 %build
 gettextize -c -f
+aclocal -I %{_aclocaldir}/gnome
 autoconf
+automake -a -c
 %configure
 %{__make}
 
