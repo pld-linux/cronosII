@@ -1,0 +1,12 @@
+--- src/Makefile.am~	Fri Nov 30 13:26:05 2001
++++ src/Makefile.am	Sun Aug  4 01:56:24 2002
+@@ -2,7 +2,8 @@
+ INCLUDES = -I$(top_srcdir) -I$(includedir) \
+ 	`gnome-config --cflags gnome` \
+ 	 -DG_LOG_DOMAIN=\"CronosII\" -DGNOMELOCALEDIR=\""$(datadir)/locale"\" \
+-	 -I../intl -I$(top_srcdir)/intl $(GNOME_INCLUDEDIR) -DDATADIR=\"${datadir}\"
++	 -I../intl -I$(top_srcdir)/intl $(GNOME_INCLUDEDIR) -DDATADIR=\"${datadir}\" \
++	 -I/usr/X11R6/include/gdk-pixbuf-1.0
+ 
+ cronosincludedir = $(includedir)/cronosII
+ 
