@@ -44,7 +44,7 @@ rm -f acinclude.m4 missing
 
 %build
 rm -f missing
-gettextize -c -f
+%{__gettextize}
 %{__libtoolize}
 aclocal -I %{_aclocaldir}/gnome
 %{__autoconf}
