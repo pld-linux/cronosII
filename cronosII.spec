@@ -22,7 +22,7 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
 Cronos II is a powerful GNOME mail client that uses its own database
-storage format to ensure the high performance it reachs.
+storage format to ensure the high performance it reaches.
 
 %description -l fr
 Cronos II est un puissant lecteur de mails pour GNOME. Il utilise son
