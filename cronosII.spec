@@ -10,10 +10,11 @@ Group(pl):	Aplikacje/Poczta
 Group(pt):	Aplicações/Correio Eletrônico
 Source0:	ftp://cronosii.sourceforge.net/pub/cronosii/%{name}-%{version}.tar.bz2
 URL:		http://cronosII.sourceforge.net/
-BuildRequires:	glib-devel
-BuildRequires:	gnome-print-devel >= 0.20.0
-BuildRequires:	gnome-libs-devel
+BuildRequires;	autoconf
 BuildRequires:	gettext-devel
+BuildRequires:	glib-devel
+BuildRequires:	gnome-libs-devel
+BuildRequires:	gnome-print-devel >= 0.20.0
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define         _prefix         /usr/X11R6
