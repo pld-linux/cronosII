@@ -19,7 +19,6 @@ BuildRequires:	gnome-print-devel >= 0.28
 BuildRequires:	gdk-pixbuf-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
-%define         _prefix         /usr/X11R6
 
 %description
 Cronos II is a powerful GNOME mail client that uses its own database
