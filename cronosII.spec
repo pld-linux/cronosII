@@ -10,7 +10,7 @@ Group(pl):	Aplikacje/Poczta
 Group(pt):	Aplicações/Correio Eletrônico
 Source0:	ftp://cronosii.sourceforge.net/pub/cronosii/%{name}-%{version}.tar.bz2
 URL:		http://cronosII.sourceforge.net/
-BuildRequires;	autoconf
+BuildRequires:	autoconf
 BuildRequires:	gettext-devel
 BuildRequires:	glib-devel
 BuildRequires:	gnome-libs-devel
