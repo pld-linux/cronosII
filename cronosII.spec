@@ -1,11 +1,11 @@
 Summary:	The GNOME Email Client
 Summary(pl):	Klient poczty dla GNOME
 Name:		cronosII
-Version:	0.2.2
-Release:	2
+Version:	0.2.2.23
+Release:	1
 License:	GPL
 Group:		Applications/Mail
-Source0:	ftp://cronosii.sourceforge.net/pub/cronosii/%{name}-%{version}.tar.bz2
+Source0:	ftp://ftp.sourceforge.net/pub/sourceforge/cronosii/%{name}-%{version}.tar.bz2
 Patch0:		%{name}-DESTDIR.patch
 URL:		http://cronosII.sourceforge.net/
 BuildRequires:	autoconf
@@ -36,7 +36,7 @@ jej czytania.
 
 %prep
 %setup -q
-%patch0 -p1
+#%patch0 -p1
 
 rm -f acinclude.m4 missing
 
