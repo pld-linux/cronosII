@@ -5,7 +5,7 @@ Version:	0.2.2.23
 Release:	1
 License:	GPL
 Group:		Applications/Mail
-Source0:	ftp://ftp.sourceforge.net/pub/sourceforge/cronosii/%{name}-%{version}.tar.bz2
+Source0:	http://dl.sourceforge.net/cronosii/%{name}-%{version}.tar.bz2
 Patch0:		%{name}-DESTDIR.patch
 Patch1:		%{name}-includes.patch
 URL:		http://cronosII.sourceforge.net/
