@@ -6,6 +6,7 @@ Release:	1
 License:	GPL
 Group:		Applications/Mail
 Source0:	http://dl.sourceforge.net/cronosii/%{name}-%{version}.tar.bz2
+# Source0-md5:	bf69cd713de0cba8d1da79d5e6687176
 Patch0:		%{name}-DESTDIR.patch
 Patch1:		%{name}-includes.patch
 URL:		http://cronosII.sourceforge.net/
