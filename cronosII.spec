@@ -2,7 +2,7 @@ Summary:	The GNOME Email Client
 Summary(pl):	Klient poczty dla GNOME
 Name:		cronosII
 Version:	0.2.2
-Release:	1
+Release:	2
 License:	GPL
 Group:		Applications/Mail
 Group(de):	Applikationen/Post
@@ -13,6 +13,7 @@ Patch0:		%{name}-DESTDIR.patch
 URL:		http://cronosII.sourceforge.net/
 BuildRequires:	autoconf
 BuildRequires:	automake
+BuildRequires:	libtool
 BuildRequires:	gettext-devel
 BuildRequires:	glib-devel
 BuildRequires:	gnome-libs-devel
@@ -42,7 +43,9 @@ jej czytania.
 rm -f acinclude.m4 missing
 
 %build
+rm -f missing
 gettextize -c -f
+libtoolize --copy --force
 aclocal -I %{_aclocaldir}/gnome
 autoconf
 automake -a -c
