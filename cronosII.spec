@@ -5,9 +5,6 @@ Version:	0.2.2
 Release:	2
 License:	GPL
 Group:		Applications/Mail
-Group(de):	Applikationen/Post
-Group(pl):	Aplikacje/Poczta
-Group(pt):	Aplicações/Correio Eletrônico
 Source0:	ftp://cronosii.sourceforge.net/pub/cronosii/%{name}-%{version}.tar.bz2
 Patch0:		%{name}-DESTDIR.patch
 URL:		http://cronosII.sourceforge.net/
