@@ -55,7 +55,7 @@ rm -rf $RPM_BUILD_ROOT
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT \
 	desktopdir=%{_applnkdir}/Network/Mail \
-	Internetdir=%{_applnkdir}/Network/Mail 
+	Internetdir=%{_applnkdir}/Network/Mail
 
 gzip -9nf TODO README NEWS FEATURES AUTHORS ChangeLog
 
