@@ -1,0 +1,16 @@
+diff -Nru cronosII-0.2.1/doc/C/Makefile.am cronosII-0.2.1.new/doc/C/Makefile.am
+--- cronosII-0.2.1/doc/C/Makefile.am	Tue Feb 27 15:39:05 2001
++++ cronosII-0.2.1.new/doc/C/Makefile.am	Sun Mar 11 15:08:21 2001
+@@ -30,10 +30,10 @@
+ 	-cp cronosII/stylesheet-images/* $(distdir)/cronosII/stylesheet-images/
+ 
+ install-data-local: cronosII/index.html
+-	$(mkinstalldirs) $(cronosII_helpdir)/images
++	$(mkinstalldirs) $(DESTDIR)$(cronosII_helpdir)/images
+ 	-for file in $(srcdir)/cronosII/*.html $(srcdir)/cronosII/*.css $(srcdir)/cronosII/stylesheet-images/*; do \
+ 	basefile=`basename $$file`; \
+-	$(INSTALL_DATA) $(srcdir)/$$file $(cronosII_helpdir)/$$basefile; \
++	$(INSTALL_DATA) $(srcdir)/$$file $(DESTDIR)$(cronosII_helpdir)/$$basefile; \
+ 	done
+ 
+ cronosII.ps: cronosII.sgml
