@@ -1,16 +1,23 @@
-diff -Nru cronosII-0.2.1/doc/C/Makefile.am cronosII-0.2.1.new/doc/C/Makefile.am
---- cronosII-0.2.1/doc/C/Makefile.am	Tue Feb 27 15:39:05 2001
-+++ cronosII-0.2.1.new/doc/C/Makefile.am	Sun Mar 11 15:08:21 2001
-@@ -30,10 +30,10 @@
- 	-cp cronosII/stylesheet-images/* $(distdir)/cronosII/stylesheet-images/
- 
+--- cronosII-0.2.2.23/doc/C/Makefile.am~	Sun Aug  4 02:05:46 2002
++++ cronosII-0.2.2.23/doc/C/Makefile.am	Sun Aug  4 02:15:12 2002
+@@ -45,16 +45,16 @@
  install-data-local: cronosII/index.html
--	$(mkinstalldirs) $(cronosII_helpdir)/images
-+	$(mkinstalldirs) $(DESTDIR)$(cronosII_helpdir)/images
- 	-for file in $(srcdir)/cronosII/*.html $(srcdir)/cronosII/*.css $(srcdir)/cronosII/stylesheet-images/*; do \
- 	basefile=`basename $$file`; \
--	$(INSTALL_DATA) $(srcdir)/$$file $(cronosII_helpdir)/$$basefile; \
-+	$(INSTALL_DATA) $(srcdir)/$$file $(DESTDIR)$(cronosII_helpdir)/$$basefile; \
- 	done
+ # this tar added --pete Feb 2002 (try keeping things nice building an rpm without it !)
+ 	tar zxvf  $(srcdir)/cronosII-htmldocs.tar.gz ;	
+-	$(mkinstalldirs) $(cronosII_helpdir)/stylesheet-images	#/ 
++	$(mkinstalldirs) $(DESTDIR)$(cronosII_helpdir)/stylesheet-images	#/ 
+ #	-for file in $(srcdir)/cronosII/*.html  $(srcdir)/cronosII/stylesheet-images/* $(srcdir)/cronosII/*.css ;
+ #	do	
+ #	basefile=`basename $$file`; \
+ #	$(INSTALL_DATA) $(srcdir)/$$file $(cronosII_helpdir)/$$basefile; \
+ #	done
+ #while that should have done it the following covers some other situations and should not hurt.
+-	cp -vf $(srcdir)/cronosII/*.html  $(cronosII_helpdir)/;	
+-	-cp -vf $(srcdir)/cronosII/stylesheet-images/*  $(cronosII_helpdir)/stylesheet-images/ ;	
+-	-cp -vf $(srcdir)/cronosII/images/*  $(cronosII_helpdir)/;
++	cp -vf $(srcdir)/cronosII/*.html  $(DESTDIR)$(cronosII_helpdir)/;	
++	-cp -vf $(srcdir)/cronosII/stylesheet-images/*  $(DESTDIR)$(cronosII_helpdir)/stylesheet-images/ ;	
++	-cp -vf $(srcdir)/cronosII/images/*  $(DESTDIR)$(cronosII_helpdir)/;
  
- cronosII.ps: cronosII.sgml
+  #added above cp's feb 2002 this covers the two most common scenarios and should only copy what is required. 
+ # next we get rid of the html directory (don't need it any more and it will be a minor hassle for people using sgml tools)
