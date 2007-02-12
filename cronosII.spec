@@ -1,5 +1,5 @@
 Summary:	The GNOME Email Client
-Summary(pl):	Klient poczty dla GNOME
+Summary(pl.UTF-8):   Klient poczty dla GNOME
 Name:		cronosII
 Version:	0.2.2.23
 Release:	1
@@ -25,14 +25,14 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 Cronos II is a powerful GNOME mail client that uses its own database
 storage format to ensure the high performance it reaches.
 
-%description -l fr
+%description -l fr.UTF-8
 Cronos II est un puissant lecteur de mails pour GNOME. Il utilise son
 propre format de stockage des mails afin d'avoir les hautes
 performances qu'il est capable d'atteidre.
 
-%description -l pl
-Cronos II jest klientem poczty dla GNOME uøywaj±cym w≥asnego formatu
-bazy poczty maj±cego na celu zapewnienie wysokiej wydajno∂ci podczas
+%description -l pl.UTF-8
+Cronos II jest klientem poczty dla GNOME u≈ºywajƒÖcym w≈Çasnego formatu
+bazy poczty majƒÖcego na celu zapewnienie wysokiej wydajno≈õci podczas
 jej czytania.
 
 %prep
