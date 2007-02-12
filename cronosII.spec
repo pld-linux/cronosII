@@ -1,5 +1,5 @@
 Summary:	The GNOME Email Client
-Summary(pl.UTF-8):   Klient poczty dla GNOME
+Summary(pl.UTF-8):	Klient poczty dla GNOME
 Name:		cronosII
 Version:	0.2.2.23
 Release:	1
